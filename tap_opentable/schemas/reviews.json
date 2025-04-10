@@ -1,0 +1,78 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": ["string", "null"],
+      "description": "The review's unique identifier"
+    },
+    "restaurant_id": {
+      "type": ["string", "null"]
+    },
+    "reservation_id": {
+      "type": ["string", "null"]
+    },
+    "dined_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "rating": {
+      "type": ["integer", "null"]
+    },
+    "review_text": {
+      "type": ["string", "null"]
+    },
+    "reviewer": {
+      "type": ["object", "null"],
+      "properties": {
+        "first_name": {
+          "type": ["string", "null"]
+        },
+        "last_name": {
+          "type": ["string", "null"]
+        },
+        "location": {
+          "type": ["string", "null"]
+        },
+        "total_reviews": {
+          "type": ["integer", "null"]
+        },
+        "is_verified": {
+          "type": ["boolean", "null"]
+        }
+      },
+      "required": ["first_name", "last_name"]
+    },
+    "ratings": {
+      "type": ["object", "null"],
+      "properties": {
+        "food": {
+          "type": ["integer", "null"]
+        },
+        "service": {
+          "type": ["integer", "null"]
+        },
+        "ambience": {
+          "type": ["integer", "null"]
+        },
+        "value": {
+          "type": ["integer", "null"]
+        },
+        "noise": {
+          "type": ["integer", "null"]
+        }
+      }
+    },
+    "would_recommend": {
+      "type": ["boolean", "null"]
+    },
+    "created_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    }
+  },
+  "required": ["id", "restaurant_id", "dined_at", "rating", "reviewer"]
+} 

@@ -1,0 +1,52 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": ["string", "null"],
+      "description": "The reservation's unique identifier"
+    },
+    "restaurant_id": {
+      "type": ["string", "null"]
+    },
+    "party_size": {
+      "type": ["integer", "null"]
+    },
+    "date_time": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "created_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "modified_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "status": {
+      "type": ["string", "null"]
+    },
+    "guest_first_name": {
+      "type": ["string", "null"]
+    },
+    "guest_last_name": {
+      "type": ["string", "null"]
+    },
+    "guest_email": {
+      "type": ["string", "null"]
+    },
+    "guest_phone": {
+      "type": ["string", "null"]
+    },
+    "special_requests": {
+      "type": ["string", "null"]
+    },
+    "table_number": {
+      "type": ["string", "null"]
+    },
+    "source": {
+      "type": ["string", "null"]
+    }
+  },
+  "required": ["id", "restaurant_id", "party_size", "date_time", "created_at"]
+} 

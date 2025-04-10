@@ -1,0 +1,77 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": ["string", "null"],
+      "description": "The availability slot's unique identifier"
+    },
+    "restaurant_id": {
+      "type": ["string", "null"]
+    },
+    "date": {
+      "type": ["string", "null"],
+      "format": "date"
+    },
+    "time": {
+      "type": ["string", "null"]
+    },
+    "party_size": {
+      "type": ["integer", "null"]
+    },
+    "tables_available": {
+      "type": ["integer", "null"]
+    },
+    "seats_available": {
+      "type": ["integer", "null"]
+    },
+    "time_slots": {
+      "type": ["array", "null"],
+      "items": {
+        "type": ["object", "null"],
+        "properties": {
+          "time": {
+            "type": ["string", "null"]
+          },
+          "available": {
+            "type": ["boolean", "null"]
+          },
+          "tables": {
+            "type": ["integer", "null"]
+          },
+          "seats": {
+            "type": ["integer", "null"]
+          }
+        },
+        "required": ["time", "available"]
+      }
+    },
+    "restrictions": {
+      "type": ["array", "null"],
+      "items": {
+        "type": ["string", "null"]
+      }
+    },
+    "special_offers": {
+      "type": ["array", "null"],
+      "items": {
+        "type": ["object", "null"],
+        "properties": {
+          "id": {
+            "type": ["string", "null"]
+          },
+          "name": {
+            "type": ["string", "null"]
+          },
+          "description": {
+            "type": ["string", "null"]
+          },
+          "discount_percentage": {
+            "type": ["number", "null"]
+          }
+        },
+        "required": ["id", "name"]
+      }
+    }
+  },
+  "required": ["id", "restaurant_id", "date", "time", "party_size"]
+}

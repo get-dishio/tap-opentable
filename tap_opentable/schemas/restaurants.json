@@ -1,0 +1,74 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": ["string", "null"],
+      "description": "The restaurant's unique identifier"
+    },
+    "name": {
+      "type": ["string", "null"],
+      "description": "The restaurant's name"
+    },
+    "address_street": {
+      "type": ["string", "null"]
+    },
+    "address_city": {
+      "type": ["string", "null"]
+    },
+    "address_state": {
+      "type": ["string", "null"]
+    },
+    "address_postal_code": {
+      "type": ["string", "null"]
+    },
+    "address_country": {
+      "type": ["string", "null"]
+    },
+    "phone": {
+      "type": ["string", "null"]
+    },
+    "website": {
+      "type": ["string", "null"]
+    },
+    "price_range": {
+      "type": ["integer", "null"]
+    },
+    "cuisines": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string"
+      }
+    },
+    "dining_style": {
+      "type": ["string", "null"]
+    },
+    "dress_code": {
+      "type": ["string", "null"]
+    },
+    "parking_details": {
+      "type": ["string", "null"]
+    },
+    "payment_options": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string"
+      }
+    },
+    "hours_of_operation": {
+      "type": ["string", "null"]
+    },
+    "latitude": {
+      "type": ["number", "null"]
+    },
+    "longitude": {
+      "type": ["number", "null"]
+    },
+    "rating": {
+      "type": ["number", "null"]
+    },
+    "review_count": {
+      "type": ["integer", "null"]
+    }
+  },
+  "required": ["id", "name"]
+} 

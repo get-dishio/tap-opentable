@@ -1,0 +1,96 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": ["string", "null"],
+      "description": "The menu's unique identifier"
+    },
+    "restaurant_id": {
+      "type": ["string", "null"]
+    },
+    "name": {
+      "type": ["string", "null"]
+    },
+    "description": {
+      "type": ["string", "null"]
+    },
+    "menu_type": {
+      "type": ["string", "null"]
+    },
+    "time_periods": {
+      "type": ["array", "null"],
+      "items": {
+        "type": ["string", "null"]
+      }
+    },
+    "sections": {
+      "type": ["array", "null"],
+      "items": {
+        "type": ["object", "null"],
+        "properties": {
+          "id": {
+            "type": ["string", "null"]
+          },
+          "name": {
+            "type": ["string", "null"]
+          },
+          "description": {
+            "type": ["string", "null"]
+          },
+          "items": {
+            "type": ["array", "null"],
+            "items": {
+              "type": ["object", "null"],
+              "properties": {
+                "id": {
+                  "type": ["string", "null"]
+                },
+                "name": {
+                  "type": ["string", "null"]
+                },
+                "description": {
+                  "type": ["string", "null"]
+                },
+                "price": {
+                  "type": ["number", "null"]
+                },
+                "currency": {
+                  "type": ["string", "null"]
+                },
+                "dietary_restrictions": {
+                  "type": ["array", "null"],
+                  "items": {
+                    "type": ["string", "null"]
+                  }
+                },
+                "ingredients": {
+                  "type": ["array", "null"],
+                  "items": {
+                    "type": ["string", "null"]
+                  }
+                }
+              },
+              "required": ["id", "name", "price"]
+            }
+          }
+        },
+        "required": ["id", "name"]
+      }
+    },
+    "currency": {
+      "type": ["string", "null"]
+    },
+    "is_active": {
+      "type": ["boolean", "null"]
+    },
+    "created_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    }
+  },
+  "required": ["id", "restaurant_id", "name"]
+} 
